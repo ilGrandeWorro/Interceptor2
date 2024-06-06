@@ -1,0 +1,142 @@
+{
+	"info": {
+		"_postman_id": "4ffeca05-848c-496d-924f-5722d28f8759",
+		"name": "Interceptor2",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "34581484",
+		"_collection_link": "https://worroteam.postman.co/workspace/Develhope~5cc78b20-dee8-4700-afb7-75aabdfabc75/collection/34581484-4ffeca05-848c-496d-924f-5722d28f8759?action=share&source=collection_link&creator=34581484"
+	},
+	"item": [
+		{
+			"name": "base",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/root",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"root"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "monthNumberAbsent",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/months",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"months"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "monthNumberEmpty",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "monthNumber",
+						"value": ""
+					}
+				],
+				"url": {
+					"raw": "http://localhost:8080/months",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"months"
+					],
+					"query": [
+						{
+							"key": "",
+							"value": null,
+							"disabled": true
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "monthNumberIsOnTheList",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "monthNumber",
+						"value": "2"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:8080/months",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"months"
+					],
+					"query": [
+						{
+							"key": "",
+							"value": "",
+							"disabled": true
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "monthNumberIsNOTOnTheList",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "monthNumber",
+						"value": "11"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:8080/months",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"months"
+					],
+					"query": [
+						{
+							"key": "",
+							"value": "",
+							"disabled": true
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
