@@ -18,6 +18,6 @@ public class MonthController {
 
     @GetMapping
     public Month findMonth(HttpServletRequest request){
-        return (Month) request.getAttribute("MonthInterceptor-month");
+        return (Month) request.getAttribute("month");
     }
 }
