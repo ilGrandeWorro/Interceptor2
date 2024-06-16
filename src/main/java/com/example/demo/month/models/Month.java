@@ -47,7 +47,8 @@ public class Month {
         this.germanName = germanName;
     }
 
-    public Month(){}
+    public Month() {
+    }
 
     public Month(int monthNumber, String englishName, String italianName, String germanName) {
         this.monthNumber = monthNumber;

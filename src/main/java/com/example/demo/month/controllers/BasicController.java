@@ -9,7 +9,7 @@ import org.springframework.web.bind.annotation.RestController;
 public class BasicController {
 
     @GetMapping
-    public String greetings (){
+    public String greetings() {
         return "Hello user!";
     }
 }

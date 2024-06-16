@@ -40,8 +40,8 @@ public class MonthInterceptor implements HandlerInterceptor {
         Month month = monthList.stream().
                 filter(listedMonth -> listedMonth.getMonthNumber() == monthNumber)
                 .findFirst().
-        //Nel caso non lo trovassi, passo un mese vuoto con i nomi forzati a "nope" come su richiesta
-                orElseGet(() -> {
+                //Nel caso non lo trovassi, passo un mese vuoto con i nomi forzati a "nope" come su richiesta
+                        orElseGet(() -> {
                     Month listedMonth = new Month();
                     listedMonth.setEnglishName("nope");
                     listedMonth.setItalianName("nope");
@@ -49,8 +49,8 @@ public class MonthInterceptor implements HandlerInterceptor {
                     return listedMonth;
                 });
         //faccio tornare il risultato (che sia in lista o vuoto) e passo la risposta come positiva
-            request.setAttribute("month", month);
-            response.setStatus(200);
+        request.setAttribute("month", month);
+        response.setStatus(200);
         return true;
     }
 }

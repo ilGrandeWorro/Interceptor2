@@ -8,8 +8,6 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-import java.util.List;
-
 @RestController
 @RequestMapping("/months")
 public class MonthController {
@@ -17,7 +15,7 @@ public class MonthController {
     private MonthService service;
 
     @GetMapping
-    public Month findMonth(HttpServletRequest request){
+    public Month findMonth(HttpServletRequest request) {
         return (Month) request.getAttribute("month");
     }
 }
